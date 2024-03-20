@@ -299,7 +299,15 @@ class Cart
             return new Collection([]);
         }
 
-        return $this->session->get($this->instance);
+        return $this->session
+            ->get($this->instance)
+            ->filter(function ($row) {
+                return !!$row->model;
+            })->map(function ($row) {
+                $row->preDiscountPrice = $row->model->getPriceEach(1, null);
+
+                return $row;
+            });
     }
 
     /**

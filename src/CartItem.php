@@ -96,6 +96,13 @@ class CartItem implements Arrayable, Jsonable
     private $discountRate = 0;
 
     /**
+     * The price before discount for the cart item.
+     *
+     * @var ?float
+     */
+    public ?float $preDiscountPrice;
+
+    /**
      * The cart instance of the cart item.
      *
      * @var null|string

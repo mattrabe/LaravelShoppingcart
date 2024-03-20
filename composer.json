@@ -1,6 +1,7 @@
 {
     "name": "bumbummen99/shoppingcart",
     "description": "Laravel Shoppingcart",
+    "version": "5.0.1",
     "keywords": ["laravel", "shoppingcart"],
     "license": "MIT",
     "authors": [
